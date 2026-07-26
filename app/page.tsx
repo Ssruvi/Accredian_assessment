@@ -31,11 +31,14 @@ const navItems = [
 ] as const;
 
 const expertise = [
-  [Lightbulb, "Product & Innovation Hub"], [BrainCircuit, "Gen-AI Mastery"],
-  [UsersRound, "Leadership Elevation"], [BarChart3, "Tech & Data Insights"],
-  [Settings2, "Operations Excellence"], [Globe2, "Digital Enterprise"],
+  [Lightbulb, "Product & Innovation Hub"],
+  [BrainCircuit, "Gen-AI Mastery"],
+  [UsersRound, "Leadership Elevation"],
+  [BarChart3, "Tech & Data Insights"],
+  [Settings2, "Operations Excellence"],
+  [Globe2, "Digital Enterprise"],
   [Cpu, "Fintech Innovation Lab"],
-];
+] as const;
 
 const segmentation = [
   ["01", "Program Specific", "Certificate, Executive, Post Graduate Certificate", "Strategy"],
@@ -137,8 +140,23 @@ export default function Home() {
       </section>
 
       <section className="expertise section-pad">
-        <div className="section-heading"><p className="eyebrow">SPECIALIZED PROGRAMS</p><h2>Our <span>Domain Expertise</span></h2><p><b>Specialized programs</b> designed to fuel innovation</p></div>
-        <div className="expertise-grid">{expertise.map(([Icon, title]) => <article key={title as string}><Icon /><h3>{title}</h3></article>)}</div>
+        <div className="section-heading">
+          <p className="eyebrow">SPECIALIZED PROGRAMS</p>
+          <h2>Our <span>Domain Expertise</span></h2>
+          <p><b>Specialized programs</b> designed to fuel innovation</p>
+        </div>
+
+        <div className="expertise-grid">
+          {expertise.map(([Icon, title]) => {
+            const ExpertiseIcon = Icgit add .on;
+            return (
+              <article key={title}>
+                <ExpertiseIcon />
+                <h3>{title}</h3>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <section className="segments section-pad">
