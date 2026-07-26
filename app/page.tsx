@@ -147,16 +147,16 @@ export default function Home() {
         </div>
 
         <div className="expertise-grid">
-          {expertise.map(([Icon, title]) => {
-            const ExpertiseIcon = Icon;
-            return (
-              <article key={title}>
-                <ExpertiseIcon />
-                <h3>{title}</h3>
-              </article>
-            );
-          })}
-        </div>
+        {expertise.map(([Icon, title]) => {
+          const ExpertiseIcon = Icon;
+          return (
+            <article key={title}>
+              <ExpertiseIcon />
+              <h3>{title}</h3>
+            </article>
+          );
+        })}
+      </div>
       </section>
 
       <section className="segments section-pad">
