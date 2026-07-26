@@ -148,7 +148,7 @@ export default function Home() {
 
         <div className="expertise-grid">
           {expertise.map(([Icon, title]) => {
-            const ExpertiseIcon = Icgit add .on;
+            const ExpertiseIcon = Icon;
             return (
               <article key={title}>
                 <ExpertiseIcon />
